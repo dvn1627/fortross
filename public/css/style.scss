@@ -1,0 +1,95 @@
+@mixin end{
+	&:after{
+		content:'';
+		display: block;
+		clear:both;
+	}
+}
+
+header{
+    @include end;
+    background: #1c2023;;
+    height: 130px;
+    div.main-header{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+        h1{
+            color: #eee;
+            margin: 0;
+			a, a:visited, a:hover{
+				color: #eee;
+				text-decoration: none;
+			}
+        }
+        >ul{
+            margin: 50px 0 0 0;
+            padding: 0;
+            float: right;
+            li{
+                color: #fff;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                margin-left: 10px;
+                display: inline-block;
+                position: relative;
+                >ul{
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    right: -125px;
+                    top: 20px;
+                    width: 250px;
+                    height: 30px;
+                    background: #777;
+                    border-radius: 7px;
+                    text-align: center;
+					border: 2px #666 solid;
+                    display: none;
+                    >li>a{
+                        line-height: 2;
+                    }
+                }
+                &:hover>ul{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+	header{
+		height: auto;
+		>div.main-header{
+			>ul{
+				float: none;
+				li{
+					margin-left: 15px;
+					display: block;
+					width: 100%;
+					text-align: left;
+					>ul{
+						display: block;
+						position: static;
+						border: none;
+						background: none;
+						height: initial;
+					}
+					>a{
+						text-decoration: underline;
+					}
+				}
+				>li{
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}

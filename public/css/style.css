@@ -1,0 +1,70 @@
+header {
+  background: #1c2023;
+  height: 130px; }
+  header:after {
+    content: '';
+    display: block;
+    clear: both; }
+  header div.main-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px; }
+    header div.main-header h1 {
+      color: #eee;
+      margin: 0; }
+      header div.main-header h1 a, header div.main-header h1 a:visited, header div.main-header h1 a:hover {
+        color: #eee;
+        text-decoration: none; }
+    header div.main-header > ul {
+      margin: 50px 0 0 0;
+      padding: 0;
+      float: right; }
+      header div.main-header > ul li {
+        color: #fff;
+        margin-left: 10px;
+        display: inline-block;
+        position: relative; }
+        header div.main-header > ul li a {
+          color: #fff;
+          text-decoration: none; }
+          header div.main-header > ul li a:hover {
+            text-decoration: underline; }
+        header div.main-header > ul li > ul {
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: -125px;
+          top: 20px;
+          width: 250px;
+          height: 30px;
+          background: #777;
+          border-radius: 7px;
+          text-align: center;
+          border: 2px #666 solid;
+          display: none; }
+          header div.main-header > ul li > ul > li > a {
+            line-height: 2; }
+        header div.main-header > ul li:hover > ul {
+          display: block; }
+
+@media screen and (max-width: 600px) {
+  header {
+    height: auto; }
+    header > div.main-header > ul {
+      float: none; }
+      header > div.main-header > ul li {
+        margin-left: 15px;
+        display: block;
+        width: 100%;
+        text-align: left; }
+        header > div.main-header > ul li > ul {
+          display: block;
+          position: static;
+          border: none;
+          background: none;
+          height: initial; }
+        header > div.main-header > ul li > a {
+          text-decoration: underline; }
+      header > div.main-header > ul > li {
+        margin-bottom: 10px; } }
